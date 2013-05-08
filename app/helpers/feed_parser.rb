@@ -13,9 +13,7 @@ class FeedParser
       parsed_feed = Feedzirra::Feed.fetch_and_parse(feed)
       items = []
       parsed_feed.entries.each do |entry|
-        items << Hash[:title, entry.title, :description, entry.summary, :url, entry.url,
-                     :guid, entry.entry_id]
-
+        items << Hash[:title, entry.title, :description, entry.summary, :url, entry.url, :guid, entry.entry_id]
       end
       data_hash = {:channel => parsed_feed.url, :items => items, :feed_type => feed}
       SportsFeed.create!(data_hash)
