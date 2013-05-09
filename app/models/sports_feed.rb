@@ -6,4 +6,5 @@ class SportsFeed
   field :channel
   field :items, type: Array
   field :feed_type
+
 end

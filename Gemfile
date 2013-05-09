@@ -33,6 +33,7 @@ gem "mongoid", :git => "git://github.com/mongoid/mongoid.git", :branch => "maste
 
 gem "feedzirra", "~> 0.2.0.rc2"
 
+gem "rufus-scheduler"
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
